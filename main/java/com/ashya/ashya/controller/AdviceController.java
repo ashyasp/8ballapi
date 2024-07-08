@@ -34,8 +34,7 @@ public class AdviceController {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No advice found for the specified category.");
             }
         } catch (Exception e) {
-            // Instead of INTERNAL_SERVER_ERROR, use BAD_REQUEST or another suitable status
-            // with a message to give more context about what went wrong
+            
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error processing request: " + e.getMessage());
         }
     }
